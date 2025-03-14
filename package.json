@@ -1,0 +1,52 @@
+{
+  "name": "erc20-tokens",
+  "version": "0.0.1",
+  "description": "Ethereum Token Contracts",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "compile": "truffle compile",
+    "fix:js": "eslint --fix test/** migrations/**",
+    "lint:js": "eslint test/** migrations/**",
+    "lint:sol": "solhint contracts/*.sol contracts/*/*.sol test/*.sol test/*/*.sol",
+    "lint": "npm run lint:js && npm run lint:sol",
+    "publish": "truffle publish",
+    "pretest": "npm run lint",
+    "test": "truffle test",
+    "coverage": "solidity-coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConsenSys/Tokens.git"
+  },
+  "keywords": [
+    "ethereum"
+  ],
+  "authors": [
+    "Simon de la Rouviere <simon.delarouviere@consensys.net>",
+    "Joseph Chow <joseph.chow@consensys.net>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ConsenSys/Tokens/issues"
+  },
+  "homepage": "https://github.com/ConsenSys/Tokens#readme",
+  "dependencies": {
+    "truffle": "^5.1.7",
+    "truffle-hdwallet-provider": "0.0.3"
+  },
+  "devDependencies": {
+    "coveralls": "3.0.0",
+    "eslint": "4.18.2",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-mocha": "4.11.0",
+    "eslint-plugin-node": "5.1.0",
+    "eslint-plugin-react": "7.5.1",
+    "solhint": "^2.3.0",
+    "solidity-coverage": "^0.7.1"
+  }
+}

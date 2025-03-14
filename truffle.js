@@ -24,10 +24,6 @@ module.exports = {
       // gasPrice
       // from - default address to use for any transaction Truffle makes during migrations
     },
-    morden: {
-      network_id: 2,
-      host: 'https://morden.infura.io'
-    },
     ropsten: {
       provider: new HDWalletProvider(mnemonic, 'https://ropsten.infura.io'),
       network_id: '3'
@@ -35,10 +31,12 @@ module.exports = {
     testrpc: {
       network_id: 'default'
     },
-    development: { // truffle test hardcodes the "test" network.
-      host: 'localhost',
-      port: '8545',
-      network_id: 'default'
-    }
+    coverage: {
+      host: "localhost",
+      network_id: "*",
+      port: 8555,        
+      gas: 0xfffffffffff,
+      gasPrice: 0x01     
+    },
   }
 }
